@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="lotsofpixels" translate="label" sortOrder="10">
+            <label>Lotsofpixels.io</label>
+        </tab>
+        <section id="cleaninventoryreservation" translate="label" sortOrder="9999" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Clean Inventory Reservation</label>
+            <tab>lotsofpixels</tab>
+            <resource>Lotsofpixels_Inventoryreservation::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>This module cleans every 6 hours the Inventory Reservations Table for correct stock values</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
